@@ -3,7 +3,5 @@ RSpec.describe Deliveright::Request do
     expect(Deliveright::Request.new(nil,nil,nil)).to respond_to(:get)
   end
 
-  it "has a post method" do
-    expect(Deliveright::Request.new(nil,nil,nil)).to respond_to(:post)
-  end
+  it "has a post method"
 end

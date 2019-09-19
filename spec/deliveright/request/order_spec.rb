@@ -1,6 +1,6 @@
 RSpec.describe Deliveright::Request::Order do
-  it "has a find_by_id method" do
-    expect(Deliveright::Request::Order.new(nil,nil,nil)).to respond_to(:find_by_id)
+  it "has a find method" do
+    expect(Deliveright::Request::Order.new(nil,nil,nil)).to respond_to(:find)
   end
 
   it "has a create method"
