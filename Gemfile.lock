@@ -45,7 +45,7 @@ DEPENDENCIES
   deliveright!
   rake (~> 10.0)
   rspec (~> 3.0)
-  simplecov
+  simplecov (~> 0.17)
 
 BUNDLED WITH
    1.17.2
