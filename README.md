@@ -1,4 +1,5 @@
 # Deliveright
+[![Build Status](https://travis-ci.org/TruRooms/deliveright.svg?branch=master)](https://travis-ci.org/TruRooms/deliveright) [![Maintainability](https://api.codeclimate.com/v1/badges/8db4e7c46a2d07f5b27b/maintainability)](https://codeclimate.com/github/TruRooms/deliveright/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/8db4e7c46a2d07f5b27b/test_coverage)](https://codeclimate.com/github/TruRooms/deliveright/test_coverage)
 
 A simple Ruby API wrapper around the Deliveright API.
 
