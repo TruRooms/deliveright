@@ -23,18 +23,14 @@ Or install it yourself as:
 
 ## Usage
 
-Create a new instance of the Deliveright Client
+Configure the Deliveright Wrapper. For Rails, should go in an initializer.
 ```ruby
-# @param [Hash] opts Options as specified in the Deliveright API docs.
-# @option opts [String] :client_id
-# @option opts [String] :client_secret
-# @option opts [String] :user_name
-# @option opts [String] :password
-client = Deliveright::Client.new({
-  client_id: 'secret',
-  client_secret: 'super_secret',
-  user_name: 'frye',
-  password: 'benderisgreat'})
+Deliveright.client_id     = 'planet_express'
+Deliveright.client_secret = 's3cr37'
+Deliveright.user_name     = 'bender@planetexpress.com'
+Deliveright.password      = 'benderisgreat'
+# Optional for use in the non-prod env.
+Deliveright.sandbox       = true
 ```
 
 ### Orders
@@ -94,7 +90,15 @@ client.orders.destroy_line_item()
 
 #### By Weight
 ```ruby
-quote = client.shipping_quote.by_weight('500')
+# Gets a shipping quote by weight.
+# @param [Hash] opts the options to create a message with.
+# @option opts [String] :zip Destination Zip
+# @option opts [String] :weight
+# @option opts [String] :service_level
+# @option opts [String] :pickup_region
+# @option opts [String] :retailer_identifier
+# @return [Deliveright::ShippingQuote]
+quote = Deliveright::ShippingQuote.by_weight('500')
 ```
 
 #### By Cubes

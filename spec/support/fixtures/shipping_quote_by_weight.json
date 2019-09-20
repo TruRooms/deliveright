@@ -1,0 +1,32 @@
+{
+    "status": "ok",
+    "data": {
+        "cost": 10000.00,
+        "message": "",
+        "errorCode": 0,
+        "steps": [
+            "Calculate delivery cost for 190,going to 93444 with service level thr, pickup from 27205,NC (retailer: , ps: ******)\")",
+            "Added tier cost for ****  (0 - 30000, **** per unit measure): ******",
+            "Total cost after tier (0 - 30000): ******",
+            "Total cost after tier is **** which is below minimum. Set base price to ****",
+            "Added fuel surcharge (**** %): *****",
+            "Sub-total cost for ***** unit measures: *****"
+        ],
+        "last_mile_terminal": {
+            "name": "Deliveright",
+            "address": {
+                "address1": "1234 Best Way",
+                "address2": "",
+                "city": "Fontana",
+                "state": "CA",
+                "zip": "12345",
+                "latitude": 132.0961116,
+                "longitude": -110.5450902
+            }
+        },
+        "accessorial_fees": {
+            "third_man_cost": 0
+        },
+        "qid": "N00B"
+    }
+}

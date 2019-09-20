@@ -1,7 +1,7 @@
 RSpec.describe Deliveright::Request do
-  it "has a get method" do
-    expect(Deliveright::Request.new(nil,nil,nil)).to respond_to(:get)
-  end
+
+  it "has a form_post method"
 
   it "has a post method"
+  it "has a delete method"
 end

@@ -21,7 +21,7 @@ module FaradayMiddleware
       when 504
         raise Deliveright::GatewayTimeout, env.body
       when ERROR_STATUSES
-        raise Deliveright::Error, "#{env.status}: #{env.body}"
+        raise Deliveright::Error, "#{env[:status]}: #{env.body}"
       end
     end
   end

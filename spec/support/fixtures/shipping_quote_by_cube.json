@@ -1,0 +1,32 @@
+{
+    "status": "ok",
+    "data": {
+        "cost": 100.00,
+        "message": "",
+        "errorCode": 0,
+        "steps": [
+            "Calculate delivery cost for 10,going to 10 with service level thr, pickup from 1000,NC (retailer: <retailer_identifier>, ps: ***)\")",
+            "Added tier cost ",
+            "Total cost after",
+            "Added fuel surcharge",
+            "Sub-total",
+            "Applying"
+        ],
+        "last_mile_terminal": {
+            "name": "Deliveright",
+            "address": {
+                "address1": "100 West Circle",
+                "address2": "",
+                "city": "Bev Hills",
+                "state": "CA",
+                "zip": "90210",
+                "latitude": 35.678552,
+                "longitude": -91.094678
+            }
+        },
+        "accessorial_fees": {
+            "third_man_cost": 0
+        },
+        "qid": "N00B"
+    }
+}
