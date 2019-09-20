@@ -38,7 +38,7 @@ Deliveright.sandbox       = true
 #### Find
 
 ```ruby
-client.orders.find('123456789')
+Deliveright::Order.find({id: '123456789'})
 ```
 
 #### **TODO:** Create
@@ -98,7 +98,7 @@ client.orders.destroy_line_item()
 # @option opts [String] :pickup_region
 # @option opts [String] :retailer_identifier
 # @return [Deliveright::ShippingQuote]
-Deliveright::ShippingQuote.by_weight('500')
+Deliveright::ShippingQuote.by_weight(opts)
 ```
 
 #### By Cubes
@@ -111,14 +111,14 @@ Deliveright::ShippingQuote.by_weight('500')
 # @option opts [String] :pickup_region
 # @option opts [String] :retailer_identifier
 # @return [Deliveright::ShippingQuote]
-Deliveright::ShippingQuote.by_cube('10')
+Deliveright::ShippingQuote.by_cube(opts)
 ```
 
 ### Scheduling
 
-#### **TODO:** Availability
+#### Availability
 ```ruby
-client.scheduling.availability('11100')
+Deliveright::Schedule.availability({zip: '12000'})
 ```
 
 ## Roadmap
@@ -135,7 +135,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/deliveright. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/TruRooms/deliveright. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Code of Conduct
 
