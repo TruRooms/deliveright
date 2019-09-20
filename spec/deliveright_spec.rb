@@ -10,4 +10,10 @@ RSpec.describe Deliveright do
     Deliveright.sandbox = false
     expect(Deliveright.api_base).to eq('https://api.deliveright.com')
   end
+
+  it "can authorize/login" do
+    auth = Deliveright.authorize
+    expect(auth).to be_a(Deliveright::Authorization)
+    expect(Deliveright.access_token).to eq('B3ND3R1SGR43T')
+  end
 end

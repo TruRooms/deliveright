@@ -1,0 +1,35 @@
+{
+    "status": "ok",
+    "data": [
+        {
+            "_id": "5d6e68c8d3465400204891bb",
+            "scheduled_date": "2019-09-27T16:00:00.000Z",
+            "route_id": "Brooklyn",
+            "stops": 5,
+            "max_number_of_stops": 10,
+            "total_pieces": 5,
+            "max_number_of_pieces": 10,
+            "capacity_status": 5
+        },
+        {
+            "_id": "5d7a44446dbbb600202a7f51",
+            "scheduled_date": "2019-10-01T16:00:00.000Z",
+            "route_id": "Brooklyn",
+            "stops": 5,
+            "max_number_of_stops": 10,
+            "total_pieces": 5,
+            "max_number_of_pieces": 10,
+            "capacity_status": 5
+        },
+        {
+            "_id": "5d7a543e6dbbb600202a8814",
+            "scheduled_date": "2019-10-04T16:00:00.000Z",
+            "route_id": "Brooklyn",
+            "stops": 5,
+            "max_number_of_stops": 10,
+            "total_pieces": 5,
+            "max_number_of_pieces": 10,
+            "capacity_status": 5
+        }
+    ]
+}
