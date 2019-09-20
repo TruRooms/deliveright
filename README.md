@@ -98,12 +98,20 @@ client.orders.destroy_line_item()
 # @option opts [String] :pickup_region
 # @option opts [String] :retailer_identifier
 # @return [Deliveright::ShippingQuote]
-quote = Deliveright::ShippingQuote.by_weight('500')
+Deliveright::ShippingQuote.by_weight('500')
 ```
 
 #### By Cubes
 ```ruby
-quote = client.shipping_quote.by_cube('100')
+# Gets a shipping quote by cube.
+# @param [Hash] opts the options to create a message with.
+# @option opts [String] :zip Destination Zip
+# @option opts [String] :cubes
+# @option opts [String] :service_level
+# @option opts [String] :pickup_region
+# @option opts [String] :retailer_identifier
+# @return [Deliveright::ShippingQuote]
+Deliveright::ShippingQuote.by_cube('10')
 ```
 
 ### Scheduling
