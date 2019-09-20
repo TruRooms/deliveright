@@ -3,7 +3,7 @@
 
 A simple Ruby API wrapper around the Deliveright API.
 
-Still in beta form, use at your own risk!
+Still in beta form, methods and endpoints may change without notice or support.
 
 ## Installation
 
