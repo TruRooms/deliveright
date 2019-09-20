@@ -6,18 +6,17 @@ module Deliveright
     attr_accessor :type, :data
 
     class << self
-    	# Gets an order
-    	# @param id [String]
-      def find id
-      	resp = perform_request(:get, '/api/shipping')
-      	Deliveright::Order.new(resp)
-      end
-
-      # Creates an order
-      # @param opts [Hash] See Deliveright dev docs.
-      def create opts
-        resp = perform_request(:get, '/api/shipping')
-        Deliveright::Order.new(resp)
+      # Finds an order by ID
+      # @param [Hash] opts the options to create a message with.
+      # @option opts [String] :zip Destination Zip
+      # @option opts [String] :weight
+      # @option opts [String] :service_level
+      # @option opts [String] :pickup_region
+      # @option opts [String] :retailer_identifier
+    	# @return [Deliveright::ShippingQuote]
+      def by_weight opts
+      	resp = perform_request(:get, '/api/shipping', {}, opts)
+      	Deliveright::ShippingQuote.new(resp)
       end
     end
 

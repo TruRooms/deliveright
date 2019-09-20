@@ -6,7 +6,6 @@ module Deliveright
   class TooManyRequests < Error; end
 end
 
-require 'faraday'
 module FaradayMiddleware
   class DeliverightErrorHandler < Faraday::Response::Middleware
     ERROR_STATUSES = 400..600

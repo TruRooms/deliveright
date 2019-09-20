@@ -14,7 +14,7 @@ module Deliveright
       when :get
         resp = get
       when :post
-        # @todo Implement a post
+        resp = post
       end
       resp
     end
@@ -24,21 +24,32 @@ module Deliveright
     def preflight
       client_id ||= Deliveright.client_id
       client_secret ||= Deliveright.client_secret
-      user_name ||= Deliveright.user_name
-      password ||= Deliveright.password
-
-      @params.merge!(client_id: client_id, client_secret: client_secret)
+      if @params.is_a? Hash
+        @params.merge!(client_id: client_id, client_secret: client_secret)
+      end
     end
 
     # Standard GET request that submits and expects JSON.
     def get
-      resp = conn.get(@path, @params, {'Accept' => 'application/json'})
+      resp = conn.get(@path, @params)
+      parse_response(resp)
+    end
+
+    # Post Request
+    def post
+      resp = conn.post(@path, @params)
+      parse_response(resp)
+    end
+
+    # Parse a response that is expected to be valid JSON
+    # @param resp [String]
+    # @return [Hash]
+    def parse_response(resp)
       begin
-        resp_body = JSON.parse(resp.body)
+        JSON.parse(resp.body)
       rescue JSON::ParserError
         raise Deliveright::Error, "Unable to Parse JSON response"
       end
-      resp_body
     end
 
     def conn
